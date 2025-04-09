@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="15" style="-fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.omdb_project.MainController">
+
+  <HBox spacing="10" alignment="CENTER">
+    <TextField fx:id="movieInput" promptText="Enter movie title" style="-fx-min-width: 300px;"/>
+    <Button text="Get Movie Info" onAction="#fetchMovie" styleClass="button"/>
+  </HBox>
+
+  <ImageView fx:id="moviePoster" fitWidth="300" fitHeight="450" preserveRatio="true"/>
+
+  <VBox spacing="5" style="-fx-padding: 10;">
+    <Label fx:id="movieTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Label fx:id="movieRating" style="-fx-font-size: 14px;"/>
+    <Label fx:id="moviePlot" style="-fx-font-size: 14px;" wrapText="true" maxWidth="500"/>
+  </VBox>
+
+  <stylesheets>
+    <URL value="@styles.css"/>
+  </stylesheets>
+</VBox>
